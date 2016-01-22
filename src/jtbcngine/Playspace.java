@@ -34,9 +34,9 @@ public class Playspace
 		this.objects.remove(index);
 	}
 	
-	public void GetObject(int index)
+	public PhysicsObject GetObject(int index)
 	{
-		this.objects.get(index);
+		return this.objects.get(index);
 	}
 	
 	public Playspace(Level level)
