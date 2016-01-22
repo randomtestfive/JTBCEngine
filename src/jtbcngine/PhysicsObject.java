@@ -13,7 +13,7 @@ public class PhysicsObject
 	int ySize = 0;
 	Level level;
 
-	PhysicsObject(Playspace p, int StartXpos, int StartYpos, int StartXvel, int StartyVel)
+	PhysicsObject(Playspace p, int StartXpos, int StartYpos, int StartXvel, int StartyVel, int xsize, int ysize)
 	{
 		this.blockSize = p.blockSize;
 		this.realXPos = StartXpos;
@@ -22,6 +22,8 @@ public class PhysicsObject
 		this.yPos = StartYpos;
 		this.xVel = StartXvel;
 		this.yVel = StartyVel;
+		this.xSize = xsize;
+		this.ySize = ysize;
 		this.level = p.l;
 	}
 
