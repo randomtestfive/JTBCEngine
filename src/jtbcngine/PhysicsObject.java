@@ -1,5 +1,11 @@
 package jtbcngine;
 
+import java.awt.Point;
+
+/**
+ * Describes an object that can be used in a Playspace
+ * @see Playspace
+ */
 public class PhysicsObject 
 {	
 	int blockSize;
@@ -13,7 +19,7 @@ public class PhysicsObject
 	int ySize = 0;
 	Level level;
 
-	PhysicsObject(Playspace p, int StartXpos, int StartYpos, int StartXvel, int StartyVel, int xsize, int ysize)
+	public PhysicsObject(Playspace p, int StartXpos, int StartYpos, int StartXvel, int StartyVel, int xsize, int ysize)
 	{
 		this.blockSize = p.blockSize;
 		this.realXPos = StartXpos;
@@ -25,6 +31,38 @@ public class PhysicsObject
 		this.xSize = xsize;
 		this.ySize = ysize;
 		this.level = p.l;
+	}
+	
+	public int getXPos()
+	{
+		return (int) realXPos;
+	}
+	
+	public int getYPos()
+	{
+		return (int) realYPos;
+	}
+	
+	public int getXVel()
+	{
+		return (int) xVel;
+	}
+	
+	public int getYVel()
+	{
+		return (int) yVel;
+	}
+	
+	public void setPos(Point p)
+	{
+		realXPos = p.x;
+		realYPos = p.y;
+	}
+	
+	public void setVel(Point p)
+	{
+		xVel = p.x;
+		yVel = p.y;
 	}
 
 	public void setLevel(Level l)
