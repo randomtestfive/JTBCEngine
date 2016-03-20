@@ -1,5 +1,9 @@
 package jtbcngine;
 
+/**
+ * Describes a level used in Playspace
+ * @see Playspace
+ */
 public class Level 
 {	
 	public int blockSize;
