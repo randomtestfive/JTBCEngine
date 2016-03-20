@@ -2,6 +2,11 @@ package jtbcngine;
 
 import java.util.ArrayList;
 
+/**
+ * Contains PhysicsObjects and allows them to collide with a Level
+ * @see Level
+ * @see PhysicsObject
+ */
 public class Playspace 
 {
 	ArrayList<PhysicsObject> objects = new ArrayList<PhysicsObject>();
@@ -27,6 +32,7 @@ public class Playspace
 	public void AddObject(PhysicsObject o)
 	{
 		this.objects.add(o);
+		o.setLevel(l);
 	}
 	
 	public void RemoveObject(int index)
