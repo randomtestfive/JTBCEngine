@@ -50,4 +50,14 @@ public class Playspace
 		this.blockSize = level.blockSize;
 		this.l = level;
 	}
+
+	public int getLevelWidth()
+	{
+		return l.level.length;
+	}
+
+	public int getLevelHeight()
+	{
+		return l.level[0].length;
+	}
 }
